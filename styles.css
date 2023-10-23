@@ -1,0 +1,171 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  /* background: url(https://store.cloudflare.steamstatic.com/public/images/v6/colored_body_top.png?v=2)
+    center top no-repeat #1b2838; */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  height: 200px;
+  margin: 0 200px;
+  margin-top: 50px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.steamdeck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.steamdeck-img {
+  width: 800px;
+}
+
+.specialoffer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.key {
+  width: calc(25% - 7.5px);
+  height: 200px;
+  font-weight: 700;
+  font: Dosis;
+  background: #fff;
+  background-size: cover;
+  background: round;
+}
+
+.so-text {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.slide1 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+.slide2 {
+  background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/730/page_bg_generated_v6b.jpg?t=1554409309");
+}
+.slide3 {
+  background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/440/page_bg_generated_v6b.jpg?t=1539304875");
+}
+
+.slide4 {
+  background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/72850/page_bg_generated_v6b.jpg?t=1493767797");
+}
+
+body {
+  background: #171d25;
+}
+
+.container {
+  background: url(https://store.cloudflare.steamstatic.com/public/images/v6/colored_body_top.png?v=2)
+    center top no-repeat #1b2838;
+}
+
+body img {
+  margin-top: 30px;
+  margin-left: 50px;
+  position: absolute;
+  display: flex;
+  align-items: end;
+}
+.nav_links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  cursor: default;
+  color: white;
+  justify-content: end;
+  margin-right: 50px;
+  font-size: 20px;
+  position: relative;
+}
+
+.searchbox {
+  background-image: none;
+
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
+  color: #fff;
+  margin-bottom: 0px;
+  outline: none;
+  height: 27px;
+
+  padding: 0px 6px;
+  position: relative;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.searchbox input.default {
+  color: #ebeef0;
+  font-size: 15px;
+  margin-top: 1px;
+  text-shadow: 1px 1px 0px rgb(255 255 255 / 10%);
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  background-color: #316282;
+  width: 300px;
+  height: 30px;
+}
+
+.pageButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.keyname {
+  padding: 6px;
+}
+
+#next,
+#prev {
+  cursor: pointer;
+  font-size: 20px;
+}

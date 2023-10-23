@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <img
+      src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+      width="176"
+      height="44"
+    />
+
+    <div class="nav_links">
+      <li>Home</li>
+      <li>Trending</li>
+      <li>About us</li>
+    </div>
+    ;
+
+    <div class="searchbox">
+      <input
+        id="searchForm"
+        name="searchForm"
+        type="text"
+        class="default"
+        placeholder="search"
+        size="22"
+        maxlength="64"
+      />
+      <div id="store_search_link">
+        <img
+          src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+        />
+      </div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide slide1">Free To Play</div>
+        <div class="swiper-slide slide2">Action</div>
+        <div class="swiper-slide slide3">Demos</div>
+        <div class="swiper-slide slide4">Strategy</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div> -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="so-text">Special Offer:</div>
+      <div class="specialoffer">
+        <!-- <div class="key">Free To Play</div>
+          <div class="key">Action</div>
+          <div class="key">Demos</div>
+          <div class="key">Strategy</div>
+          <div class="key">Slide 5</div>
+          <div class="key">Slide 6</div>
+          <div class="key">Slide 7</div>
+          <div class="key">Slide 8</div> -->
+      </div>
+      <div class="pageButton">
+        <button id="prev">Previous Page</button>
+        <button id="next">Next Page</button>
+      </div>
+      <div class="steamdeck">
+        <img
+          class="steamdeck-img"
+          src="https://cdn.akamai.steamstatic.com/steam/clusters/sale_autumn2019_assets/54b5034d397baccb93181cc6/deck_banner_desktop_english.gif?t=1688069940"
+        />
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="app.js"></script>
+  </body>
+</html>
