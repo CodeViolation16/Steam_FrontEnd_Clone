@@ -16,7 +16,7 @@ body {
 
 .swiper {
   height: 200px;
-  margin: 0 200px;
+  margin: 0 auto;
   margin-top: 50px;
 }
 
@@ -120,14 +120,14 @@ body img {
   margin-right: 50px;
   font-size: 20px;
   position: relative;
+  margin: 0 auto;
+  width: max-content;
 }
 
 .searchbox {
   background-image: none;
 
   border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
   color: #fff;
   margin-bottom: 0px;
   outline: none;

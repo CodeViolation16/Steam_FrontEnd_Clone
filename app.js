@@ -1,6 +1,10 @@
 //Fetching Data
 // const API_KEY = "8f0e4b62-8d88-4f97-8961-9f484c5fd193";
 
+let selectedGeneres = "action";
+let currentPage = 1;
+let searchValue = "";
+
 const fetchData = async () => {
   try {
     var requestOptions = {
@@ -16,7 +20,7 @@ const fetchData = async () => {
       .then((result) => {
         const slider = document.querySelector(".swiper-wrapper");
         result.data.forEach((child) => {
-          slider.innerHTML += `<a href="https://store.steampowered.com/category/${child.name}/" class="swiper-slide slide1">${child.name}</a>`;
+          slider.innerHTML += `<a  class="swiper-slide slide1">${child.name}</a>`;
         });
 
         var swiper = new Swiper(".mySwiper", {
@@ -36,6 +40,21 @@ const fetchData = async () => {
         //  <div class="swiper-slide slide1">Free To Play</div>;
 
         console.log(result);
+      })
+      .then(() => {
+        const categoryList = document.getElementsByClassName("swiper-slide");
+        console.log(categoryList);
+
+        for (let i = 0; i < categoryList.length; i++) {
+          categoryList[i].addEventListener("click", () => {
+            console.log(categoryList[i].innerHTML);
+            selectedGeneres = categoryList[i].innerHTML;
+            currentPage = 1;
+            searchValue = "";
+            fetchGames(currentPage, searchValue, selectedGeneres);
+            document.getElementById("searchForm").value = searchValue;
+          });
+        }
       });
   } catch (err) {
     console.log(err, "error");
@@ -43,16 +62,15 @@ const fetchData = async () => {
 };
 
 fetchData();
-let currentPage = 1;
 
-const fetchGames = async (page, query = "") => {
+const fetchGames = async (page, query = "", genres) => {
   var requestOptions = {
     method: "GET",
     redirect: "follow",
   };
 
   fetch(
-    `https://steam-api-dot-cs-platform-306304.et.r.appspot.com/games?limit=20&page=${page}$q=${query}`,
+    `https://steam-api-dot-cs-platform-306304.et.r.appspot.com/games?limit=20&page=${page}&q=${query}&genres=${genres}`,
     requestOptions
   )
     .then((response) => response.json())
@@ -68,24 +86,48 @@ const fetchGames = async (page, query = "") => {
     })
     .catch((error) => console.log("error", error));
 };
-fetchGames(currentPage);
+fetchGames(currentPage, searchValue, selectedGeneres);
 
 const nextButton = document.querySelector("#next");
 const prevButton = document.querySelector("#prev");
 
 nextButton.addEventListener("click", () => {
   currentPage++;
-  fetchGames(currentPage);
+  fetchGames(currentPage, searchValue, selectedGeneres);
 });
 
 prevButton.addEventListener("click", () => {
-  currentPage--;
-  fetchGames(currentPage);
+  if (currentPage == 1) {
+    fetchGames(currentPage, searchValue, selectedGeneres);
+  } else {
+    currentPage--;
+    fetchGames(currentPage, searchValue, selectedGeneres);
+  }
 });
 
 const searchForm = document.querySelector("#searchForm");
 
 searchForm.addEventListener("input", (e) => {
   console.log(e.target.value);
-  fetchGames(currentPage, e.target.value);
+  // fetchGames(currentPage, e.target.value);
 });
+
+const searchbutton = document.querySelector(".search-button");
+searchbutton.addEventListener("click", () => {
+  console.log(searchForm.value);
+  searchValue = searchForm.value;
+  fetchGames(currentPage, searchValue, selectedGeneres);
+});
+
+// when click new category, remove text button value, reset,
+
+// find html removign function
+
+// click next page and still save search value
+// nextButton.searchform.value??
+
+
+
+
+
+//
