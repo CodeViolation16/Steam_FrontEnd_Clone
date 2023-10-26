@@ -37,8 +37,6 @@ const fetchData = async () => {
           },
         });
 
-        //  <div class="swiper-slide slide1">Free To Play</div>;
-
         console.log(result);
       })
       .then(() => {
@@ -125,9 +123,5 @@ searchbutton.addEventListener("click", () => {
 
 // click next page and still save search value
 // nextButton.searchform.value??
-
-
-
-
 
 //
