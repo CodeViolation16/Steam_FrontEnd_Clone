@@ -23,8 +23,8 @@ const fetchData = async () => {
           slider.innerHTML += `<a  class="swiper-slide slide1">${child.name}</a>`;
         });
 
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
+        new Swiper(".mySwiper", {
+          slidesPerView: window.innerWidth < 800 ? 2 : 4,
           spaceBetween: 30,
           pagination: {
             el: ".swiper-pagination",
@@ -116,6 +116,22 @@ searchbutton.addEventListener("click", () => {
   searchValue = searchForm.value;
   fetchGames(currentPage, searchValue, selectedGeneres);
 });
+
+window.addEventListener("resize", () => {
+  new Swiper(".mySwiper", {
+    slidesPerView: window.innerWidth < 800 ? 2 : 4,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+})
 
 // when click new category, remove text button value, reset,
 

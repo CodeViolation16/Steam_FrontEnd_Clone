@@ -17,7 +17,7 @@ body {
 .swiper {
   height: 200px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .swiper-slide {
@@ -103,54 +103,49 @@ body {
     center top no-repeat #1b2838;
 }
 
-body img {
-  margin-top: 30px;
-  margin-left: 50px;
-  position: absolute;
-  display: flex;
-  align-items: end;
-}
-.nav_links {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-  cursor: default;
-  color: white;
-  justify-content: end;
-  margin-right: 50px;
-  font-size: 20px;
-  position: relative;
-  margin: 0 auto;
-  width: max-content;
-}
-
 .searchbox {
-  background-image: none;
-
-  border-radius: 3px;
-  color: #fff;
-  margin-bottom: 0px;
-  outline: none;
-  height: 27px;
-
   padding: 0px 6px;
-  position: relative;
-  justify-content: end;
+  justify-content: space-between;
   display: flex;
+  margin: 10px 0;
   align-items: center;
-  margin-right: 50px;
+}
+
+.searchbox ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1em;
+  color: white;
+  font-size: 20px;
+}
+
+.searchbox ul li{
+  cursor: not-allowed;
 }
 
 .searchbox input.default {
   color: #ebeef0;
   font-size: 15px;
-  margin-top: 1px;
-  text-shadow: 1px 1px 0px rgb(255 255 255 / 10%);
+  outline: 0;
+  border: 0;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 300;
   background-color: #316282;
-  width: 300px;
-  height: 30px;
+  max-width: 300px;
+  height: 31px;
+  padding-left: 5px;
+}
+
+.searchbox button{
+  height: max-content;
+  border: 0;
+  outline: 0;
+  background-color: #316282;
+  border: 1px solid #316282;;
+  height: 33px;
+  color: white;
+  border-radius: 3px;
 }
 
 .pageButton {
@@ -168,4 +163,18 @@ body img {
 #prev {
   cursor: pointer;
   font-size: 20px;
+}
+
+a.swiper-slide{
+  cursor: pointer;
+}
+
+a.swiper-slide:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .searchbox{
+    flex-direction: column;
+  }
 }
