@@ -99,6 +99,7 @@ prevButton.addEventListener("click", () => {
     fetchGames(currentPage, searchValue, selectedGeneres);
   } else {
     currentPage--;
+    Math.max(1, currentPage)
     fetchGames(currentPage, searchValue, selectedGeneres);
   }
 });
