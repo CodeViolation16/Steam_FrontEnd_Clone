@@ -162,7 +162,14 @@ body {
 #next,
 #prev {
   cursor: pointer;
-  font-size: 20px;
+  height: max-content;
+  border: 0;
+  outline: 0;
+  background-color: #316282;
+  border: 1px solid #316282;;
+  height: 33px;
+  color: white;
+  border-radius: 3px;
 }
 
 a.swiper-slide{
